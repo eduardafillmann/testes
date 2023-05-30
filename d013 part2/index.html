@@ -12,11 +12,28 @@
 
         table {
             width: 500px;
+            border-collapse: collapse;
         }
 
         td,th {
             border: 1px solid black;
             padding: 10px;
+        }
+
+        th.especial {
+            background-color:rgb(88, 88, 88);
+            color: white;
+        }
+
+        th.media {
+            background-color:rgb(88, 88, 88);
+            color: white;
+            text-align: left;
+        }
+
+        td#gray {
+            background-color: rgb(88, 88, 88);
+            color: white;
         }
 
         caption {
@@ -37,11 +54,74 @@
     </style>
 </head>
 <body>
-    <thead>
-        <tr>
-            <th>Área</th>
-            <th></th>
-        </tr>
-    </thead>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" class="especial" scope="rowgroup">Área</th>
+                <th rowspan="2" class="especial" scope="rowgroup">Disciplinas</th>
+                <th colspan="2" class="especial" scope="colgroup">Notas</th>
+                
+                <th rowspan="2" class="especial">Média</th>
+            </tr>
+            <tr>
+                <th class="especial">Nota 1</th>
+                <th class="especial">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4">Exatas</th>
+                <td>Matemática</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+
+            </tr>
+            
+            <th colspan="4" class="media">Média de Exatas</th>
+            <td id="gray">0.0</td>
+
+            <tr>
+                <th rowspan="2">Humanas</th>
+                <td>História</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+
+            </tr>
+
+            <th colspan="4" class="media">Média de Humanas</th>
+            <td id="gray">0.0</td>
+        </tbody>
+    
+    </table>
 </body>
 </html>
